@@ -15,26 +15,31 @@ function Pult() {
 
     return (
         <>
-            <div className="pult-container transform translate-x-[1450px] translate-y-[413px] w-[140px] rotate-[-9deg]">
-                <img className={'palec absolute transform translate-x-[41px] translate-y-[105px]  z-[2]'} src={palec} alt="plus"/>
+            <div className="pult-container absolute left-[1451px] top-[495px] rotate-[-9deg] ">
+
                 <img className={'btnstart cursor-pointer'} src={btnstart} alt="btnstart"/>
-
-                <img className={'bigbtn relative top-[98px] left-[19px] cursor-pointer z-[1]'} src={bigbtn} alt="bigbtn"/>
-                <img className={'home relative top-[149px] left-[27px] cursor-pointer'} src={home} alt="home"/>
-                <img className={'keyone relative top-[250px] left-[20px] cursor-pointer'} src={keyone} alt="keyone"/>
-                <img className={'keytwo relative top-[263px] left-[20px] cursor-pointer'} src={keytwo} alt="keytwo"/>
-                <img className={'krestovina relative top-[-85px] left-[12px] rotate-[2deg] cursor-pointer'}
-                     src={krestovina} alt="krestovina"/>
-                <img className={'krestovina relative top-[-105px] left-[49px] rotate-[2deg] cursor-pointer'}
-                     src={krestovina} alt="krestovina"/>
-                <img className={'krestovina relative top-[-109px] left-[30px] rotate-[90deg] cursor-pointer'}
-                     src={krestovina} alt="krestovina"/>
-                <img className={'krestovina relative top-[-167px] left-[31px] rotate-[-90deg] cursor-pointer'}
-                     src={krestovina} alt="krestovina"/>
-                <img className={'minus relative top-[-16px] left-[-6px] cursor-pointer'} src={minus} alt="minus"/>
-                <img className={'plus relative top-[-35px] left-[61px] cursor-pointer'} src={plus} alt="plus"/>
+                <img className={'bigbtn relative top-[90px] left-[22px] z-[1] cursor-pointer'} src={bigbtn}
+                     alt="bigbtn"/>
+                <img className={'home relative top-[135px] left-[30px] cursor-pointer'} src={home} alt="home"/>
+                <img className={'keyone relative top-[225px] left-[25px] cursor-pointer'} src={keyone} alt="keyone"/>
+                <img className={'keytwo relative top-[236px] left-[24px] cursor-pointer'} src={keytwo} alt="keytwo"/>
+                <img className={'krestovina relative top-[-89px] left-[12px] rotate-[2deg] cursor-pointer'}
+                     src={krestovina}
+                     alt="krestovina"/>
+                <img className={'krestovina relative top-[-108px] left-[49px] rotate-[2deg] cursor-pointer'}
+                     src={krestovina}
+                     alt="krestovina"/>
+                <img className={'krestovina relative top-[-115px] left-[30px] rotate-[90deg] cursor-pointer'}
+                     src={krestovina}
+                     alt="krestovina"/>
+                <img className={'krestovina relative top-[-169px] left-[31px] rotate-[-90deg] cursor-pointer'}
+                     src={krestovina}
+                     alt="krestovina"/>
+                <img className={'minus relative top-[-30px] left-[-4px] cursor-pointer'} src={minus} alt="minus"/>
+                <img className={'plus relative top-[-50px] left-[63.3px] cursor-pointer'} src={plus} alt="plus"/>
             </div>
-
+            <img className={'palec absolute left-[1490px] top-[580px]  rotate-[-11deg] z-[2] '} src={palec}
+                 alt="plus"/>
 
         </>
     )

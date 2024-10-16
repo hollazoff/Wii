@@ -9,7 +9,7 @@ function Screeonstart() {
     return (
         <>
             <div
-                className="screenonstart w-[792px] h-[456px] bg-gray-200 transform translate-x-[564px] translate-y-[65px]">
+                className="screenonstart w-[792px] h-[456px] bg-gray-200 transform translate-x-[564px] translate-y-[165px]">
                 <div className={"screen-block pt-[25px] flex flex-wrap justify-between px-[70px] gap-[10px]"}>
                     <img className={'card w-[154px] h-[91px] '} src={fonepustcard}/>
                     <img className={'card w-[154px] h-[91px] '} src={fonepustcard}/>
