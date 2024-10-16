@@ -35,7 +35,7 @@ body {
 width: 100vw;
   height: 100vh;
   background: url("./src/assets/bg.png");
-  background-size: contain;
+  background-size: 100vw 100vh;
 }
 
 h1 {
