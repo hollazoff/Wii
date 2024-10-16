@@ -7,10 +7,10 @@ function Screenoff() {
 
     return (
         <>
-            {/*<div className="screenoff w-[792px] h-[456px] bg-black transform translate-x-[564px] translate-y-[65px]">*/}
+           <div className="screenoff w-[792px] h-[405px] bg-black transform translate-x-[564px] translate-y-[165px]">
 
 
-            {/*</div>*/}
+           </div>
 
 
         </>

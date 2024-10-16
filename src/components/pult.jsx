@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { updateStatus } from '../data/pultlogic.jsx'
 import btnstart from '../assets/btnstart.png'
 import bigbtn from '../assets/bigbtn.png'
 import home from '../assets/home.png'
@@ -8,16 +9,21 @@ import krestovina from '../assets/krestovinabtn.png'
 import minus from '../assets/minus.png'
 import plus from '../assets/plus.png'
 import palec from '../assets/palec.png'
+
 import '../App.css'
 
-function Pult() {
-    const [count, setCount] = useState(0)
 
+
+
+function Pult() {
+    const [count, setCount] = useState(0);
+    const handleBtnStartClick = () => {
+        updateStatus(/* аргументы, если нужно */);
+    };
     return (
         <>
             <div className="pult-container absolute left-[1451px] top-[495px] rotate-[-9deg] ">
-
-                <img className={'btnstart cursor-pointer'} src={btnstart} alt="btnstart"/>
+                <img className={'btnstart cursor-pointer'} src={btnstart} alt="btnstart" onClick={handleBtnStartClick} />
                 <img className={'bigbtn relative top-[90px] left-[22px] z-[1] cursor-pointer'} src={bigbtn}
                      alt="bigbtn"/>
                 <img className={'home relative top-[135px] left-[30px] cursor-pointer'} src={home} alt="home"/>
