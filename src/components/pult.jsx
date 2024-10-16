@@ -1,5 +1,8 @@
 import { useState } from 'react'
-import { updateStatus } from '../data/pultlogic.jsx'
+import { updateStatus, status } from  '../data/pultlogic.jsx'
+import Screenoff from './Screenoff.jsx';
+import Screenonstart from './Screeonstart.jsx';
+
 import btnstart from '../assets/btnstart.png'
 import bigbtn from '../assets/bigbtn.png'
 import home from '../assets/home.png'
@@ -16,10 +19,11 @@ import '../App.css'
 
 
 function Pult() {
-    const [count, setCount] = useState(0);
+    const [currentStatus, setCurrentStatus] = useState(status);
     const handleBtnStartClick = () => {
-        updateStatus(/* аргументы, если нужно */);
+        updateStatus(setCurrentStatus);
     };
+
     return (
         <>
             <div className="pult-container absolute left-[1451px] top-[495px] rotate-[-9deg] ">
@@ -46,7 +50,7 @@ function Pult() {
             </div>
             <img className={'palec absolute left-[1490px] top-[580px]  rotate-[-11deg] z-[2] '} src={palec}
                  alt="plus"/>
-
+            {currentStatus === 2 ? <Screenonstart /> : <Screenoff />}
         </>
     )
 }

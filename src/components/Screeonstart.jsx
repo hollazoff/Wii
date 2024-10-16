@@ -12,7 +12,7 @@ function Screeonstart() {
     return (
         <>
             <div
-                className="screenonstart hidden w-[792px] h-[405px] bg-gray-200 transform translate-x-[564px] translate-y-[165px]">
+                className="screenonstart w-[792px] h-[405px] bg-gray-200 transform translate-x-[564px] translate-y-[165px]">
                 <div className={"screen-block pt-[20px] flex flex-wrap justify-between px-[95px] gap-[7px]"}>
                     <img className={'card w-[144px] h-[86px] rounded-lg'} src={profil}/>
                     <img className={'card w-[144px] h-[86px] rounded-lg'} src={mario}/>
