@@ -1,9 +1,15 @@
 import { useState } from 'react'
+import {shop1} from '../data/Shop.js'
+import {shop2} from '../data/Shop.js'
+import {shop3} from '../data/Shop.js'
 import panel from '../assets/panel.png'
 import marioshop from '../assets/shopmario.png'
 import contrashop from '../assets/shopcontra.png'
 import blastershop from '../assets/shopblaster.png'
+
+
 import '../App.css'
+
 
 function ScreenShop() {
 
@@ -18,15 +24,15 @@ function ScreenShop() {
                     <div className={"cards pt-[10px] flex justify-between"}>
                         <div className={"card flex flex-col cursor-pointer "}>
                             <img className={"card-img w-[170px] h-[158px] rounded-lg"} src={marioshop}/>
-                            <span className={"card-text text-center font-bold text-lg mt-[8px] "}>MARIO GALAXY</span>
+                            <p className={"card-text text-center font-bold text-lg mt-[8px] "}>{shop1.Name}</p>
                         </div>
                         <div className={"card flex flex-col cursor-pointer "}>
                             <img className={"card-img w-[170px] h-[158px] rounded-lg"} src={blastershop}/>
-                            <span className={"card-text text-center font-bold text-lg mt-[8px] "}>BLASTER MASTER</span>
+                            <p className={"card-text text-center font-bold text-lg mt-[8px] "}>{shop2.Name}</p>
                         </div>
                         <div className={"card flex flex-col cursor-pointer "}>
                             <img className={"card-img w-[170px] h-[158px] rounded-lg"} src={contrashop}/>
-                            <span className={"card-text text-center font-bold text-lg mt-[8px] "}>CONTRA</span>
+                            <p className={"card-text text-center font-bold text-lg mt-[8px] "}>{shop3.Name}</p>
                         </div>
                     </div>
 

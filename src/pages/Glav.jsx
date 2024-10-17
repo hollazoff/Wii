@@ -7,11 +7,13 @@ import ScreenShop from '../components/ScreenShop.jsx';
 import ScreenGame from "../components/ScreenGame.jsx";
 import ScreenAchivment from "../components/ScreenAchivment.jsx";
 import '../index.css';
+import ScreenSettings from "../components/ScreenSettings.jsx";
 
 
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
+        <ScreenSettings />
         <Pult />
     </StrictMode>
 );

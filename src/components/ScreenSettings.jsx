@@ -22,19 +22,10 @@ function ScreenSettings() {
                     <div
                         className={"block w-[663px] h-[252px]  flex bg-[#D5D5D5] rounded-[12px]   flex-wrap justify-between  gap-[7px]"}>
 
-                        <div className={"block-left pl-[30px] pt-[16px]"}>
+                        <div className={"block-left pl-[30px] pt-[6px]"}>
                             <p className={"left-title text-3xl font-semibold text-black pb-[36px]"}>Настройки</p>
-                            <div className={"left-row flex pb-[17px] items-center"}>
-                                <p className={"row-title text-lg text-black"}>Яркость:</p>
-                                <div
-                                    className={"row-data ml-[20px] flex justify-between items-center w-[520px] h-[36px] bg-[#E8E8E8] rounded-[12px]  text-black outline outline-[#64BBD8] outline-1"}>
-                                    <img src={setminus} alt="setminus" className="rounded-[12px] pl-[10px]"/>
-                                    <p className={"left-title text-lg font-semibold text-black "}>50%</p>
-                                    <img src={setplus} alt="setplus" className="rounded-[12px] pr-[10px]"/>
-                                </div>
 
-                            </div>
-                            <div className={"left-row flex pb-[17px] items-center"}>
+                            <div className={"left-row flex pb-[17px] items-center pt-[35px]"}>
                                 <p className={"row-title text-lg text-black"}>Звук:</p>
                                 <div
                                     className={"row-data ml-[48px] flex justify-between items-center w-[520px] h-[36px] bg-[#E8E8E8] rounded-[12px]  text-black outline outline-[#64BBD8] outline-1"}>
