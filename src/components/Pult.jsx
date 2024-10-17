@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { updateStatus, setstatus, status, actcard, checkcard, perehod } from '../data/PultLogic.js'
+import {updateStatus, setstatus, status, actcard, checkcard, perehod, updateVolume, volume} from '../data/PultLogic.js'
 import ScreenOff from './ScreenOff.jsx';
 import Screenonstart from './ScreeonStart.jsx';
 
@@ -27,7 +27,7 @@ import ScreenDevice from "./ScreenDevice.jsx";
 function Pult() {
     const [currentStatus, setCurrentStatus] = useState(status);
     const [currentActcard, setCurrentActcard] = useState(actcard);
-
+    const [curentVolume, setCurentVolume] = useState(volume);
 
     const handleBtnStartClick = () => {
         updateStatus(setCurrentStatus);
@@ -59,6 +59,15 @@ function Pult() {
         perehod(setCurrentStatus);
     };
 
+
+    const upervolume = () => {
+        updateVolume(setCurentVolume, 10);
+    };
+
+    const downervolume = () => {
+        updateVolume(setCurentVolume, -10);
+    };
+
     return (
         <>
             <div className="pult-container absolute left-[1451px] top-[495px] rotate-[-9deg] ">
@@ -80,8 +89,8 @@ function Pult() {
                 <img className={'krestovina relative top-[-169px] left-[31px] rotate-[-90deg] cursor-pointer'}
                      src={krestovina}
                      alt="krestovina" onClick={upActCard}/>
-                <img className={'minus relative top-[-30px] left-[-4px] cursor-pointer'} src={minus} alt="minus"/>
-                <img className={'plus relative top-[-50px] left-[63.3px] cursor-pointer'} src={plus} alt="plus"/>
+                <img className={'minus relative top-[-30px] left-[-4px] cursor-pointer'} src={minus} alt="minus" onClick={downervolume}/>
+                <img className={'plus relative top-[-50px] left-[63.3px] cursor-pointer'} src={plus} alt="plus" onClick={upervolume}/>
             </div>
             <img className={'palec absolute left-[1490px] top-[580px]  rotate-[-11deg] z-[2] '} src={palec}
                  alt="plus"/>

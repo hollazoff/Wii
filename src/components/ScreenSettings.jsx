@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 
-
+import {volume,updateVolume} from '../data/PultLogic.js'
 import panel from '../assets/panel.png'
 import setminus from '../assets/setminus.png'
 import setplus from '../assets/setplus.png'
@@ -30,7 +30,7 @@ function ScreenSettings() {
                                 <div
                                     className={"row-data ml-[48px] flex justify-between items-center w-[520px] h-[36px] bg-[#E8E8E8] rounded-[12px]  text-black outline outline-[#64BBD8] outline-1"}>
                                     <img src={setminus} alt="setminus" className="rounded-[12px] pl-[10px]"/>
-                                    <p className={"left-title text-lg font-semibold text-black "}>50%</p>
+                                    <p id={'volv'} className={"left-title text-lg font-semibold text-black "}>50%</p>
                                     <img src={setplus} alt="setplus" className="rounded-[12px] pr-[10px]"/>
                                 </div>
                             </div>

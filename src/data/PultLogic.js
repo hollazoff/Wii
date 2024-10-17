@@ -89,3 +89,21 @@ export function perehod(setCurrentStatus) {
     }
 }
 
+
+export let volume = 50
+export  function updateVolume(setCurentVolume, setVolume) {
+    const idvolv = document.getElementById('volv')
+    volume = volume + setVolume;
+    if (volume >=100) {
+        volume = 100;
+    }
+
+    if (volume <= 0) {
+        volume = 0;
+    }
+
+    console.log(volume);
+
+    setCurentVolume(volume)
+    idvolv.textContent = volume + '%';
+}
