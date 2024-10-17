@@ -11,7 +11,7 @@ function ScreenShop() {
     return (
         <>
             <div
-                className="screenonstart hidden w-[792px] h-[405px] bg-gray-200 transform translate-x-[564px] translate-y-[165px]">
+                className="screenonstart w-[792px] h-[405px] bg-gray-200 transform translate-x-[564px] translate-y-[165px]">
                 <div
                     className={"screenshop-block relative top-[20px] mx-[64px] bg-gray-300 flex flex-wrap justify-between rounded-xl flex-col px-[42px] py-[15px]"}>
                     <p className={"screenshop-tex font-bold text-2xl"}>Магазин</p>
