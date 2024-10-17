@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { updateStatus, status } from '../data/PultLogic.jsx'
+import { updateStatus, status } from '../data/PultLogic.js'
 import ScreenOff from './ScreenOff.jsx';
 import Screenonstart from './ScreeonStart.jsx';
 
