@@ -1,21 +1,21 @@
 import { useState } from 'react'
 import fonepustcard from '../assets/fonepustcard.svg'
-import mario from '../assets/mario.png'
+import mario from '../assets/mariocard.png'
 import profil from '../assets/profil.png'
 import settings from '../assets/settings.png'
 import panel from '../assets/panel.png'
 import '../App.css'
 
-function Screeonstart() {
-    const [count, setCount] = useState(0)
+function ScreeonStart() {
+
 
     return (
         <>
             <div
                 className="screenonstart w-[792px] h-[405px] bg-gray-200 transform translate-x-[564px] translate-y-[165px]">
                 <div className={"screen-block pt-[20px] flex flex-wrap justify-between px-[95px] gap-[7px]"}>
-                    <img className={'card w-[144px] h-[86px] rounded-lg'} src={profil}/>
                     <img className={'card w-[144px] h-[86px] rounded-lg'} src={mario}/>
+                    <img className={'card w-[144px] h-[86px] rounded-lg'} src={profil}/>
                     <img className={'card w-[144px] h-[86px] rounded-lg'} src={settings}/>
                     <img className={'card w-[144px] h-[86px] rounded-lg'} src={fonepustcard}/>
                     <img className={'card w-[144px] h-[86px] rounded-lg'} src={fonepustcard}/>
@@ -37,4 +37,4 @@ function Screeonstart() {
     )
 }
 
-export default Screeonstart
+export default ScreeonStart

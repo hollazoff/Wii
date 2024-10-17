@@ -2,8 +2,8 @@ import { useState } from 'react'
 
 import '../App.css'
 
-function Screenoff() {
-    const [count, setCount] = useState(0)
+function ScreenOff() {
+
 
     return (
         <>
@@ -17,4 +17,4 @@ function Screenoff() {
     )
 }
 
-export default Screenoff
+export default ScreenOff

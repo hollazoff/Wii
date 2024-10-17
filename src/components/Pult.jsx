@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { updateStatus, status } from  '../data/pultlogic.jsx'
-import Screenoff from './Screenoff.jsx';
-import Screenonstart from './Screeonstart.jsx';
+import { updateStatus, status } from '../data/PultLogic.jsx'
+import ScreenOff from './ScreenOff.jsx';
+import Screenonstart from './ScreeonStart.jsx';
 
 import btnstart from '../assets/btnstart.png'
 import bigbtn from '../assets/bigbtn.png'
@@ -50,7 +50,7 @@ function Pult() {
             </div>
             <img className={'palec absolute left-[1490px] top-[580px]  rotate-[-11deg] z-[2] '} src={palec}
                  alt="plus"/>
-            {currentStatus === 2 ? <Screenonstart /> : <Screenoff />}
+            {currentStatus === 2 ? <Screenonstart /> : <ScreenOff />}
         </>
     )
 }

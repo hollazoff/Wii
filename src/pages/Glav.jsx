@@ -1,8 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import Pult from '../components/pult.jsx';
-import Screenoff from '../components/Screenoff.jsx';
-import Screenonstart from '../components/Screeonstart.jsx';
+import Pult from '../components/Pult.jsx';
+import ScreenOff from '../components/ScreenOff.jsx';
+import Screenonstart from '../components/ScreeonStart.jsx';
 import '../index.css';
 
 createRoot(document.getElementById('root')).render(
