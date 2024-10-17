@@ -38,6 +38,7 @@ body {
   height: 991px;
   background-repeat: no-repeat;
   overflow:hidden;
+  margin: 0 auto;
 }
 
 h1 {
