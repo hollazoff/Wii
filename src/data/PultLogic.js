@@ -11,29 +11,24 @@ export function updateStatus(setStatus) {
         setStatus(1);
     }
 
-    console.log('status', status);
-
 }
 
-export function setstatus(setStatus, newStatus ) {
-    const  oldstatus= status;
-    status = newStatus;
 
+export function setstatus(setStatus, newStatus) {
+    const oldstatus = status;
+    status = newStatus;
     if (oldstatus === 1) {
         status = 1;
         setStatus(1);
     }
-
     if (newStatus === 2 && status !== 1) {
         status = 2;
         setStatus(2);
     }
-
     if (status === 3) {
         status = 3;
         setStatus(3);
     }
-
     if (status === 4) {
         status = 4;
         setStatus(4);
@@ -50,15 +45,15 @@ export function setstatus(setStatus, newStatus ) {
         status = 7;
         setStatus(7);
     }
+    if (status === 8) {
+        status = 8;
+        setStatus(8);
+    }
 
-    console.log('status', status);
 }
 
-
-
 export let actcard = 1;
-
-export function checkcard(setCurrentActcard, newactcard,naststatus) {
+export function checkcard(setCurrentActcard, newactcard,) {
 
 
     if (status === 2) {
@@ -77,6 +72,20 @@ export function checkcard(setCurrentActcard, newactcard,naststatus) {
         actcard = 1;
     }
 
+
 }
 
+let activeCardId = null;
+export function perehod(setCurrentStatus) {
+    const activeCard = document.querySelector('.activ');
+    if (activeCard) {
+        activeCardId = parseInt(activeCard.id);
+        status = activeCardId;
+        setCurrentStatus(status);
+
+    } else {
+        activeCardId = null;
+
+    }
+}
 
