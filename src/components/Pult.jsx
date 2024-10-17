@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { updateStatus, setstatus, status, actcard, checkcard, } from '../data/PultLogic.js'
+import { updateStatus, setstatus, status, actcard, checkcard, perehod } from '../data/PultLogic.js'
 import ScreenOff from './ScreenOff.jsx';
 import Screenonstart from './ScreeonStart.jsx';
 
@@ -17,6 +17,9 @@ import '../App.css'
 import ScreenGame from "./ScreenGame.jsx";
 import ScreenShop from "./ScreenShop.jsx";
 import ScreenAchivment from "./ScreenAchivment.jsx";
+import ScreenProfil from "./ScreenProfil.jsx";
+import ScreenSettings from "./ScreenSettings.jsx";
+import ScreenDevice from "./ScreenDevice.jsx";
 
 
 
@@ -24,6 +27,7 @@ import ScreenAchivment from "./ScreenAchivment.jsx";
 function Pult() {
     const [currentStatus, setCurrentStatus] = useState(status);
     const [currentActcard, setCurrentActcard] = useState(actcard);
+
 
     const handleBtnStartClick = () => {
         updateStatus(setCurrentStatus);
@@ -51,14 +55,16 @@ function Pult() {
         checkcard(setCurrentActcard, -4);
     };
 
-
+    const enablecard = () => {
+        perehod(setCurrentStatus);
+    };
 
     return (
         <>
             <div className="pult-container absolute left-[1451px] top-[495px] rotate-[-9deg] ">
                 <img className={'btnstart cursor-pointer'} src={btnstart} alt="btnstart" onClick={handleBtnStartClick} />
                 <img className={'bigbtn relative top-[90px] left-[22px] z-[1] cursor-pointer'} src={bigbtn}
-                     alt="bigbtn"/>
+                     alt="bigbtn" onClick={enablecard}/>
                 <img className={'home relative top-[135px] left-[30px] cursor-pointer'} src={home} alt="home" onClick={handleBtnhomeClick}/>
                 <img className={'keyone relative top-[225px] left-[25px] cursor-pointer'} src={keyone} alt="keyone" />
                 <img className={'keytwo relative top-[236px] left-[24px] cursor-pointer'} src={keytwo} alt="keytwo" />
@@ -83,12 +89,12 @@ function Pult() {
 
             {currentStatus === 2 ? <Screenonstart /> :
                 currentStatus === 3 ? <ScreenGame /> :
-                    currentStatus === 4 ? <ScreenGame /> :
-                        currentStatus === 5 ? <ScreenGame /> :
-                            currentStatus === 6 ? <ScreenGame /> :
-                                currentStatus === 7 ? <ScreenShop /> :
-                                    currentStatus === 8 ? <ScreenAchivment /> :
-                                    <ScreenOff />}
+                    currentStatus === 4 ? <ScreenProfil /> :
+                        currentStatus === 5 ? <ScreenShop /> :
+                            currentStatus === 6 ? <ScreenAchivment /> :
+                                currentStatus === 7 ? <ScreenSettings /> :
+                                    currentStatus === 8 ? <ScreenDevice /> :
+                                        <ScreenOff />}
         </>
     )
 }

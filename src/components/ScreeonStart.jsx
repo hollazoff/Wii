@@ -10,7 +10,7 @@ import achivment from '../assets/achivment.png'
 import panel from '../assets/panel.png'
 import '../App.css'
 
-function ScreeonStart() {
+function ScreeonStart( ) {
     // const [currentActcard, setCurrentActcard] = useState(actcard);
     //
     // const leftActCard = () => {
