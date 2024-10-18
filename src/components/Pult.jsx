@@ -1,8 +1,7 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import {updateStatus, setstatus, status, actcard, checkcard, perehod, updateVolume, volume} from '../data/PultLogic.js'
 import ScreenOff from './ScreenOff.jsx';
 import Screenonstart from './ScreeonStart.jsx';
-
 import btnstart from '../assets/btnstart.png'
 import bigbtn from '../assets/bigbtn.png'
 import home from '../assets/home.png'
@@ -12,7 +11,6 @@ import krestovina from '../assets/krestovinabtn.png'
 import minus from '../assets/minus.png'
 import plus from '../assets/plus.png'
 import palec from '../assets/palec.png'
-
 import '../App.css'
 import ScreenGame from "./ScreenGame.jsx";
 import ScreenShop from "./ScreenShop.jsx";
@@ -21,9 +19,6 @@ import ScreenProfil from "./ScreenProfil.jsx";
 import ScreenSettings from "./ScreenSettings.jsx";
 import ScreenDevice from "./ScreenDevice.jsx";
 
-
-
-
 function Pult() {
     const [currentStatus, setCurrentStatus] = useState(status);
     const [currentActcard, setCurrentActcard] = useState(actcard);
@@ -31,39 +26,28 @@ function Pult() {
 
     const handleBtnStartClick = () => {
         updateStatus(setCurrentStatus);
-
     };
     const handleBtnhomeClick = () => {
         setstatus(setCurrentStatus, 2);
     };
-
-
-
     const rightActCard = () => {
         checkcard(setCurrentActcard, 1);
     };
-
     const leftActCard = () => {
         checkcard(setCurrentActcard, -1);
     };
-
     const downActCard = () => {
         checkcard(setCurrentActcard, 4);
     };
-
     const upActCard = () => {
         checkcard(setCurrentActcard, -4);
     };
-
     const enablecard = () => {
         perehod(setCurrentStatus);
     };
-
-
     const upervolume = () => {
         updateVolume(setCurentVolume, 10);
     };
-
     const downervolume = () => {
         updateVolume(setCurentVolume, -10);
     };
@@ -71,12 +55,13 @@ function Pult() {
     return (
         <>
             <div className="pult-container absolute left-[1451px] top-[495px] rotate-[-9deg] ">
-                <img className={'btnstart cursor-pointer'} src={btnstart} alt="btnstart" onClick={handleBtnStartClick} />
+                <img className={'btnstart cursor-pointer'} src={btnstart} alt="btnstart" onClick={handleBtnStartClick}/>
                 <img className={'bigbtn relative top-[90px] left-[22px] z-[1] cursor-pointer'} src={bigbtn}
                      alt="bigbtn" onClick={enablecard}/>
-                <img className={'home relative top-[135px] left-[30px] cursor-pointer'} src={home} alt="home" onClick={handleBtnhomeClick}/>
-                <img className={'keyone relative top-[225px] left-[25px] cursor-pointer'} src={keyone} alt="keyone" />
-                <img className={'keytwo relative top-[236px] left-[24px] cursor-pointer'} src={keytwo} alt="keytwo" />
+                <img className={'home relative top-[135px] left-[30px] cursor-pointer'} src={home} alt="home"
+                     onClick={handleBtnhomeClick}/>
+                <img className={'keyone relative top-[225px] left-[25px] cursor-pointer'} src={keyone} alt="keyone"/>
+                <img className={'keytwo relative top-[236px] left-[24px] cursor-pointer'} src={keytwo} alt="keytwo"/>
                 <img className={'krestovina relative top-[-89px] left-[12px] rotate-[2deg] cursor-pointer'}
                      src={krestovina}
                      alt="krestovina" onClick={leftActCard}/>
@@ -89,21 +74,21 @@ function Pult() {
                 <img className={'krestovina relative top-[-169px] left-[31px] rotate-[-90deg] cursor-pointer'}
                      src={krestovina}
                      alt="krestovina" onClick={upActCard}/>
-                <img className={'minus relative top-[-30px] left-[-4px] cursor-pointer'} src={minus} alt="minus" onClick={downervolume}/>
-                <img className={'plus relative top-[-50px] left-[63.3px] cursor-pointer'} src={plus} alt="plus" onClick={upervolume}/>
+                <img className={'minus relative top-[-30px] left-[-4px] cursor-pointer'} src={minus} alt="minus"
+                     onClick={downervolume}/>
+                <img className={'plus relative top-[-50px] left-[63.3px] cursor-pointer'} src={plus} alt="plus"
+                     onClick={upervolume}/>
             </div>
             <img className={'palec absolute left-[1490px] top-[580px]  rotate-[-11deg] z-[2] '} src={palec}
                  alt="plus"/>
-            {/*{currentStatus === 2 ? <Screenonstart /> : <ScreenOff />}*/}
-
-            {currentStatus === 2 ? <Screenonstart /> :
-                currentStatus === 3 ? <ScreenGame /> :
-                    currentStatus === 4 ? <ScreenProfil /> :
-                        currentStatus === 5 ? <ScreenShop /> :
-                            currentStatus === 6 ? <ScreenAchivment /> :
-                                currentStatus === 7 ? <ScreenSettings /> :
-                                    currentStatus === 8 ? <ScreenDevice /> :
-                                        <ScreenOff />}
+            {currentStatus === 2 ? <Screenonstart/> :
+                currentStatus === 3 ? <ScreenGame/> :
+                    currentStatus === 4 ? <ScreenProfil/> :
+                        currentStatus === 5 ? <ScreenShop/> :
+                            currentStatus === 6 ? <ScreenAchivment/> :
+                                currentStatus === 7 ? <ScreenSettings/> :
+                                    currentStatus === 8 ? <ScreenDevice/> :
+                                        <ScreenOff/>}
         </>
     )
 }

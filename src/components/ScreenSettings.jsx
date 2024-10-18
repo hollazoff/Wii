@@ -1,18 +1,9 @@
-import {useState} from 'react'
-
-
-import {volume,updateVolume} from '../data/PultLogic.js'
 import panel from '../assets/panel.png'
 import setminus from '../assets/setminus.png'
 import setplus from '../assets/setplus.png'
-
-
 import '../App.css'
 
-
-
 function ScreenSettings() {
-
 
     return (
         <>
@@ -21,10 +12,8 @@ function ScreenSettings() {
                 <div className={"blockB    rounded-[12px]  flex-wrap justify-between pt-[29px] pl-[64px] gap-[7px]"}>
                     <div
                         className={"block w-[663px] h-[252px]  flex bg-[#D5D5D5] rounded-[12px]   flex-wrap justify-between  gap-[7px]"}>
-
                         <div className={"block-left pl-[30px] pt-[6px]"}>
                             <p className={"left-title text-3xl font-semibold text-black pb-[36px]"}>Настройки</p>
-
                             <div className={"left-row flex pb-[17px] items-center pt-[35px]"}>
                                 <p className={"row-title text-lg text-black"}>Звук:</p>
                                 <div
@@ -34,15 +23,11 @@ function ScreenSettings() {
                                     <img src={setplus} alt="setplus" className="rounded-[12px] pr-[10px]"/>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
                 <img className={'screen-panel mt-[29px] w-[100vw] h-[95px]'} src={panel}/>
             </div>
-
-
         </>
     )
 }

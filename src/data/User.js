@@ -1,14 +1,12 @@
-export class User extends Object{
+export class User extends Object {
 
-        Balance = ''
-        Nickname = ''
-        Level = ''
-        Games = ''
-        Achivment = ''+'/12';
+    Balance = ''
+    Nickname = ''
+    Level = ''
+    Games = ''
+    Achivment = '' ;
 
-
-
-    constructor(Balance, Nickname, Level, Games, Achivment){
+    constructor(Balance, Nickname, Level, Games, Achivment) {
 
         super();
         this.Balance = Balance;
@@ -17,9 +15,6 @@ export class User extends Object{
         this.Games = Games;
         this.Achivment = Achivment;
     }
-
-
-
-
 }
-export let user = new User("1000$","Райн Гослинг","9","87","6");
+
+export let user = new User("1000$", "Райн Гослинг", "9", "87", "6");

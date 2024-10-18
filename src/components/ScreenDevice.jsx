@@ -1,16 +1,9 @@
-import {useState} from 'react'
 import {console} from '../data/Console.js'
 import {system} from '../data/System.js'
-
 import panel from '../assets/panel.png'
-
 import '../App.css'
 
-
-import friendstatus from "../assets/friendststus.png";
-
 function ScreenDevice() {
-
 
     return (
         <>
@@ -19,7 +12,6 @@ function ScreenDevice() {
                 <div className={"blockB    rounded-[12px]  flex-wrap justify-between pt-[29px] pl-[64px] gap-[7px]"}>
                     <div
                         className={"block w-[663px] h-[252px]  flex bg-[#D5D5D5] rounded-[12px]   flex-wrap justify-between  gap-[7px]"}>
-
                         <div className={"block-left pl-[30px] pt-[16px]"}>
                             <p className={"left-title text-3xl font-semibold text-black pb-[36px]"}>Об устройстве</p>
                             <div className={"left-row flex pb-[17px] items-center"}>
@@ -34,10 +26,8 @@ function ScreenDevice() {
                                 <p className={"row-title text-lg text-black"}>Гарантия:</p>
                                 <p className={"row-data ml-[23px] flex justify-center items-center w-[131px] h-[36px] bg-[#E8E8E8] rounded-[12px]  text-black outline outline-[#64BBD8] outline-1"}>{console.HasGaratny}</p>
                             </div>
-
                         </div>
                         <div className={"block-right pr-[30px] pt-[16px] w-[340px] flex flex-col items-end"}>
-
                             <p className={"left-title text-3xl font-semibold text-black pb-[36px] pr-[190px]"}>Система</p>
                             <div
                                 className={"friends flex flex-wrap justify-between items-center h-[140px] content-between"}>
@@ -70,13 +60,10 @@ function ScreenDevice() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <img className={'screen-panel mt-[29px] w-[100vw] h-[95px]'} src={panel}/>
             </div>
-
-
         </>
     )
 }

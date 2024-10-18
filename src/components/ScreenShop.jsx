@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {shop1} from '../data/Shop.js'
 import {shop2} from '../data/Shop.js'
 import {shop3} from '../data/Shop.js'
@@ -6,13 +5,9 @@ import panel from '../assets/panel.png'
 import marioshop from '../assets/shopmario.png'
 import contrashop from '../assets/shopcontra.png'
 import blastershop from '../assets/shopblaster.png'
-
-
 import '../App.css'
 
-
 function ScreenShop() {
-
 
     return (
         <>
@@ -35,14 +30,11 @@ function ScreenShop() {
                             <p className={"card-text text-center font-bold text-lg mt-[8px] "}>{shop3.Name}</p>
                         </div>
                     </div>
-
                 </div>
                 <p className={'screen-text text-3xl text-center text-gray-600 absolute top-[304px] left-[365px]'}>14:13</p>
                 <img className={'screen-panel mt-[-30px] w-[100vw] h-[95px] absolute top-[340px]'} src={panel}/>
                 <p className={'screen-text text-2xl absolute text-center font-bold text-gray-600 top-[355px] left-[369px] opacity-80'}>16/10</p>
             </div>
-
-
         </>
     )
 }

@@ -1,4 +1,4 @@
-class System extends Object{
+class System extends Object {
     Fps = ''
     Hz = ''
     DolbySound = ''
@@ -7,9 +7,7 @@ class System extends Object{
     Ram = ''
 
 
-
-
-    constructor(Fps, Hz, DolbySound, RemotePlay, HdrSupport, Ram){
+    constructor(Fps, Hz, DolbySound, RemotePlay, HdrSupport, Ram) {
 
         super();
         this.Fps = Fps;
@@ -21,4 +19,4 @@ class System extends Object{
     }
 }
 
-export let system = new System("30","60","Нет","Нет","Нет","128MB");
+export let system = new System("30", "60", "Нет", "Нет", "Нет", "128MB");

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import panel from '../assets/panel.png'
 import {achivment1} from '../data/Achivment.js'
 import {achivment2} from '../data/Achivment.js'
@@ -12,17 +11,16 @@ import {achivment9} from '../data/Achivment.js'
 import {achivment10} from '../data/Achivment.js'
 import {achivment11} from '../data/Achivment.js'
 import {achivment12} from '../data/Achivment.js'
-
 import '../App.css'
 
 function ScreenAchivment() {
-
 
     return (
         <>
             <div
                 className="screenonstart  w-[792px] h-[405px] bg-gray-200 transform translate-x-[564px] translate-y-[165px]">
-                <div className={"achivment-block relative top-[20px] text-black mx-[64px] bg-gray-300 flex flex-wrap justify-between rounded-xl flex-col px-[42px] py-[15px]"}>
+                <div
+                    className={"achivment-block relative top-[20px] text-black mx-[64px] bg-gray-300 flex flex-wrap justify-between rounded-xl flex-col px-[42px] py-[15px]"}>
                     <p className={"achivment-tex font-bold text-2xl"}>Достижения</p>
                     <div className={"achivments py-[20px] flex items-center flex-wrap justify-between gap-[18px]"}>
                         <div className={"achivment flex gap-[10px]"}>
@@ -74,14 +72,11 @@ function ScreenAchivment() {
                             <span className={"achivment-procent font-bold text-xl"}>{achivment12.Percent}%</span>
                         </div>
                     </div>
-
                 </div>
                 <p className={'screen-text text-3xl text-center text-gray-600 absolute top-[304px] left-[365px]'}>14:13</p>
                 <img className={'screen-panel mt-[-30px] w-[100vw] h-[95px] absolute top-[340px]'} src={panel}/>
                 <p className={'screen-text text-2xl absolute text-center font-bold text-gray-600 top-[355px] left-[369px] opacity-80'}>16/10</p>
             </div>
-
-
         </>
     )
 }

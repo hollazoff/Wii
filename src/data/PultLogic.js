@@ -4,15 +4,11 @@ export function updateStatus(setStatus) {
     if (status === 1) {
         status = 2;
         setStatus(2);
-    }
-
-    else {
+    } else {
         status = 1;
         setStatus(1);
     }
-
 }
-
 
 export function setstatus(setStatus, newStatus) {
     const oldstatus = status;
@@ -49,61 +45,50 @@ export function setstatus(setStatus, newStatus) {
         status = 8;
         setStatus(8);
     }
-
 }
 
 export let actcard = 1;
+
 export function checkcard(setCurrentActcard, newactcard,) {
-
-
     if (status === 2) {
         actcard = actcard + newactcard;
-
         if (actcard > 12) {
             actcard = 1; // Возвращаемся к 1, если превышает 12
         } else if (actcard < 1) {
             actcard = 12; // То же поведение, если нужно учитывать границы
         }
-
         setCurrentActcard(actcard);
 
-    }
-    else {
+    } else {
         actcard = 1;
     }
-
-
 }
 
 let activeCardId = null;
+
 export function perehod(setCurrentStatus) {
     const activeCard = document.querySelector('.activ');
     if (activeCard) {
         activeCardId = parseInt(activeCard.id);
         status = activeCardId;
         setCurrentStatus(status);
-
     } else {
         activeCardId = null;
-
     }
 }
 
-
 export let volume = 50
-export  function updateVolume(setCurentVolume, setVolume) {
+
+export function updateVolume(setCurentVolume, setVolume) {
     const idvolv = document.getElementById('volv')
     volume = volume + setVolume;
-    if (volume >=100) {
+    if (volume >= 100) {
         volume = 100;
     }
-
     if (volume <= 0) {
         volume = 0;
     }
-
     console.log(volume);
-
     setCurentVolume(volume)
     idvolv.textContent = volume + '%';
 }
